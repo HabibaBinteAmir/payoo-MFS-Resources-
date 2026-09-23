@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+ 
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          Outfit: ['Outfit', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+<body class=" h-[100vh] bg-[#F4F5F7] flex  justify-center items-center  ">
+  <div class=" bg-white  p-10 m-10 py-25 rounded-3xl">
+      <fieldset class="fieldset   ">
+  <legend class=" font-Outfit text-[#080808] font-medium text-[16px] ">Mobile number</legend>
+  <input type="" class="p-9 m-2 w-[350px] bg-[#F4F5F7] rounded-full input border-none font-Outfit font-medium text-[16px]" placeholder="Enter Your Number" />
+ <legend class=" font-Outfit text-[#080808] font-medium text-[16px]">4 Digit Pin</legend>
+  <label class="w-[350px] h-[54px] m-2 input validator border-none bg-[#F4F5F7] rounded-full">
+    
+  <svg class="h-[1em] opacity-52" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <path
+        d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+      ></path>
+      <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
+    </g>
+  </svg>
+  
+  <input
+    class="  input border-none font-Outfit font-medium text-[16px]  bg-" 
+    type="password"
+    required
+    placeholder="Enter 4 Digit pin"
+    minlength="8"
+    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+  />
+</label>
+<p class="validator-hint hidden">
+  Must be more than 8 characters, including
+  <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
+</p>
+<div class="mx-auto p-3">
+    <button class="btn w-[350px] border-none h-20 rounded-full bg-[#0874F2] text-white  text-[20px] font-medium font-Outfit">Primary</button>
+
+</div>
+</fieldset>
+
+  </div>
+</body>
+</html>
